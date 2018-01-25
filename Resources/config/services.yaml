@@ -6,8 +6,8 @@ services:
 
     Maps_red\OpenIDConnectBundle\Security\User\UserProvider:
         arguments:
-            - '%openid_connect.issuer%'
-            - '%openid_connect.client_id%'
-            - '%openid_connect.client_secret%'
-            - '%openid_connect.parameters%'
+            - '%open_id_connect.issuer%'
+            - '%open_id_connect.client_id%'
+            - '%open_id_connect.client_secret%'
+            - '%open_id_connect.parameters%'
         public: true

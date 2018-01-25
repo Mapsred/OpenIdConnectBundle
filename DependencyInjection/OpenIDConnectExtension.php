@@ -21,11 +21,19 @@ class OpenIDConnectExtension extends Extension
     public function load(array $configs, ContainerBuilder $container)
     {
         $openIdConnectConfig = $this->processConfiguration(new Configuration(), $configs);
-        $container->setParameter('openid_connect', $openIdConnectConfig);
+        $this->loadParameters($container, $openIdConnectConfig);
 
         // load bundle's services
         $loader = new YamlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
         $loader->load('services.yaml');
+    }
+
+    private function loadParameters(ContainerBuilder $container, $configs)
+    {
+        foreach ($configs as $key => $value) {
+            $key = sprintf('open_id_connect.%s', $key);
+            $container->setParameter($key, $value);
+        }
     }
 
 }
