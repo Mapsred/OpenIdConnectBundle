@@ -1,0 +1,10 @@
+routing:
+    openidconnect_homepage:
+      path: /
+      defaults: { _controller: "Maps_red/OpenIDConnectBundle:Basic:homepage" }
+
+    openidconnect_logout:
+      path: /logout
+      defaults: { _controller: "Maps_red/OpenIDConnectBundle:Basic:logout" }
+
+

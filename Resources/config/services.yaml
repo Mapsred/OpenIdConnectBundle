@@ -1,4 +1,9 @@
 services:
+    Maps_red\OpenIDConnectBundle\Controller\:
+        resource: '../../Controller'
+        tags: ['controller.service_arguments']
+
+
     Maps_red\OpenIDConnectBundle\Security\GuardAuthenticator:
         arguments: ['@Maps_red\OpenIDConnectBundle\Security\User\UserProvider', "@router"]
         public: true
