@@ -24,7 +24,7 @@ class BasicController extends Controller
      */
     public function homepageAction()
     {
-        return $this->render("OpenIDConnect:Basic:homepage.html.twig");
+        return $this->render("@OpenIDConnectBundle/Basic/homepage.html.twig");
     }
 
     /**
@@ -36,7 +36,6 @@ class BasicController extends Controller
         $this->get('security.token_storage')->setToken(null);
         $this->get('session')->invalidate();
         $route = $this->generateUrl('openidconnect_homepage', [], UrlGenerator::ABSOLUTE_URL);
-        $this->get(UserProvider::class)->logout($token, $route);
+        $this->container->get(UserProvider::class)->logout($token, $route);
     }
-
 }
