@@ -6,6 +6,7 @@
         "php": ">=7.1.0",
         "jumbojett/openid-connect-php": "^0.3.0",
         "symfony/framework-bundle": "~3.0|^4.0",
+        "sensio/framework-extra-bundle": "^5.1",
         "symfony/security-bundle": "~3.0|^4.0",
         "symfony/yaml": "~3.0|^4.0",
         "symfony/twig-bundle": "~3.0|^4.0"

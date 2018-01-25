@@ -26,7 +26,6 @@ class OpenIDConnectExtension extends Extension
         // load bundle's services
         $loader = new YamlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
         $loader->load('services.yaml');
-        $loader->load('routing.yaml');
     }
 
     private function loadParameters(ContainerBuilder $container, $configs)

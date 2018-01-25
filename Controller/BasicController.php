@@ -1,9 +1,12 @@
 <?php
 
+namespace Maps_red\OpenIDConnectBundle\Controller;
 
 use Maps_red\OpenIDConnectBundle\Security\User\User;
 use Maps_red\OpenIDConnectBundle\Security\User\UserProvider;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Generator\UrlGenerator;
 
 /**
@@ -14,11 +17,19 @@ use Symfony\Component\Routing\Generator\UrlGenerator;
  */
 class BasicController extends Controller
 {
+    /**
+     * @Route("/", name="openidconnect_homepage")
+     *
+     * @return Response
+     */
     public function homepageAction()
     {
-        return $this->render("Maps_red/BasicController:Basic:homepage.html.twig");
+        return $this->render("OpenIDConnect:Basic:homepage.html.twig");
     }
 
+    /**
+     * @Route("/logout", name="openidconnect_logout")
+     */
     public function logoutAction()
     {
         $token = $this->getUser()->getToken();
