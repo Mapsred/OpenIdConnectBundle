@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Maps_red\OpenIdConnectBundle\Security\User;
+namespace Maps_red\OpenIDConnectBundle\Security\User;
 
 use OpenIDConnectClient;
 use Symfony\Component\Security\Core\User\UserInterface;

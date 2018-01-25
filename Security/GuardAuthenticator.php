@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Maps_red\OpenIdConnectBundle\Security;
+namespace Maps_red\OpenIDConnectBundle\Security;
 
-use Maps_red\OpenIdConnectBundle\Security\User\User;
-use Maps_red\OpenIdConnectBundle\Security\User\UserProvider;
+use Maps_red\OpenIDConnectBundle\Security\User\User;
+use Maps_red\OpenIDConnectBundle\Security\User\UserProvider;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Router;

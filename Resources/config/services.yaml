@@ -1,10 +1,10 @@
 services:
-    Maps_red\OpenIdConnectBundle\Security\GuardAuthenticator:
-        arguments: ['@Maps_red\OpenIdConnectBundle\Security\User\UserProvider', "@router"]
+    Maps_red\OpenIDConnectBundle\Security\GuardAuthenticator:
+        arguments: ['@Maps_red\OpenIDConnectBundle\Security\User\UserProvider', "@router"]
         public: true
 
 
-    Maps_red\OpenIdConnectBundle\Security\User\UserProvider:
+    Maps_red\OpenIDConnectBundle\Security\User\UserProvider:
         arguments:
             - '%openid_connect.issuer%'
             - '%openid_connect.client_id%'

@@ -1,6 +1,6 @@
 <?php
 
-namespace Maps_red\OpenIdConnectBundle\DependencyInjection;
+namespace Maps_red\OpenIDConnectBundle\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -8,11 +8,11 @@ use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
 /**
- * Class OpenIdConnectExtension
+ * Class OpenIDConnectExtension
  *
  * @author François MATHIEU <francois.mathieu@livexp.fr>
  */
-class OpenIdConnectExtension extends Extension
+class OpenIDConnectExtension extends Extension
 {
     /**
      * @param array $configs
