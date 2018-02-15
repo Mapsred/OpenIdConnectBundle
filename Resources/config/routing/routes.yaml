@@ -2,3 +2,6 @@ open_id_connect_bundle:
     resource: '@OpenIDConnectBundle/Controller/BasicController.php'
     prefix: /
     type: annotation
+
+open_id_connect_login:
+    path: /login
