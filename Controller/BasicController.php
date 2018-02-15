@@ -24,7 +24,7 @@ class BasicController extends Controller
      */
     public function homepageAction()
     {
-        return $this->render("@OpenIDConnectBundle/Basic/homepage.html.twig");
+        return $this->render("@OpenIDConnect/Basic/homepage.html.twig");
     }
 
     /**

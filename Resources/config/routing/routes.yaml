@@ -1,7 +1,13 @@
-openidconnect_homepage:
-  path: /
-  defaults: { _controller: "open_id_connect.basic_controller:Basic:homepage" }
+#openidconnect_homepage:
+#  path: /
+#  defaults: { _controller: "open_id_connect.basic_controller:Basic:homepage" }
+#
+#openidconnect_logout:
+#  path: /logout
+#  defaults: { _controller: "open_id_connect.basic_controller:Basic:logout" }
+#
 
-openidconnect_logout:
-  path: /logout
-  defaults: { _controller: "open_id_connect.basic_controller:Basic:logout" }
+open_id_connect_bundle:
+    resource: '@OpenIDConnectBundle/Controller/BasicController.php'
+    prefix: /
+    type: annotation

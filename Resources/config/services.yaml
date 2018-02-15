@@ -1,18 +1,19 @@
 services:
-    Maps_red\OpenIDConnectBundle\Controller\:
-        resource: '../../Controller'
-        tags: ['controller.service_arguments']
-
-
-    Maps_red\OpenIDConnectBundle\Security\GuardAuthenticator:
-        arguments: ['@Maps_red\OpenIDConnectBundle\Security\User\UserProvider', "@router"]
-        public: true
-
-
-    Maps_red\OpenIDConnectBundle\Security\User\UserProvider:
+    open_id_connect.user_provider:
+        class: Maps_red\OpenIDConnectBundle\Security\User\UserProvider
         arguments:
             - '%open_id_connect.issuer%'
             - '%open_id_connect.client_id%'
             - '%open_id_connect.client_secret%'
             - '%open_id_connect.parameters%'
+        public: true
+
+    open_id_connect.guard_anthenticator:
+        class: Maps_red\OpenIDConnectBundle\Security\GuardAuthenticator
+        arguments: ['@open_id_connect.user_provider', "@router"]
+        public: true
+
+    open_id_connect.basic_controller:
+        class: Maps_red\OpenIDConnectBundle\Controller\BasicController
+        arguments: ['@service.container']
         public: true
