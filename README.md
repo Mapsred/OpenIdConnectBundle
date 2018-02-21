@@ -7,7 +7,7 @@ The OpenIDConnectBundle adds OpenId connection in Symfony.
 ### Add OpenIDConnectBundle to your project
 
 ```bash
-composer require mapsred/openid-connect-bundle
+composer require maps_red/openid-connect-bundle
 ```
 
 #### Enable the Bundle in the Kernel (< Symfony 4.0)
@@ -35,6 +35,7 @@ app:
 
 
 ### security.yaml (example)
+```yaml
     security:
         providers:
             webservice:
@@ -59,3 +60,4 @@ app:
         access_control:
             - { path: ^/login, role: IS_AUTHENTICATED_ANONYMOUSLY }
             - { path: ^/, role: ROLE_USER }
+```
